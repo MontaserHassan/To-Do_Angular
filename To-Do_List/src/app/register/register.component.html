@@ -1,0 +1,68 @@
+
+<h1>Register</h1>
+<p class="par">Please fill in this form to create an account.</p>
+
+<form action="action_page.php" #myForm="ngForm" (ngSubmit)="signUpTemplate()">
+
+  <div class="container">
+
+    <hr>
+
+    <label for="firstName"><b>First Name</b></label>
+    <input type="text" class="form-control" placeholder="Enter First Name" #firstName="ngModel" ngModel name="firstName" id="firstName" required>
+    <span class="text-danger"
+      *ngIf="firstName.errors?.['required'] && firstName.touched">
+      <br>
+      Invalid First Name
+    </span>
+
+    <br>
+
+    <label for="lastName"><b>Last Name</b></label>
+    <input type="text" class="form-control" placeholder="Enter Last Name" #lastName="ngModel" ngModel name="lastName" id="lastName" required>
+    <span class="text-danger"
+      *ngIf="lastName.errors?.['required'] && lastName.touched">
+      <br>
+      Invalid Last Name
+    </span>
+
+    <br>
+
+    <label for="email"><b>Email</b></label>
+    <input [ngClass]="email.touched && email.errors ? 'not-Valid' : 'valid' " type="text" class="form-control" placeholder="Enter Email" #email="ngModel" [ngModel]="emailDefaultValue" name="email" id="email" email required>
+    <span class="text-danger"
+      *ngIf="email.touched && email.errors?.['required']">
+      <br>
+      required email
+    </span>
+
+    <span class="text-danger"
+      *ngIf="email.touched && email.errors?.['email']">
+      <br>
+      Invalid email
+    </span>
+
+    <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" class="form-control" placeholder="Enter Password" #password="ngModel" ngModel name="psw" id="psw" required>
+    <span class="text-danger"
+      *ngIf="password.errors?.['required'] && password.touched">
+      <br>
+      Invalid password
+    </span>
+
+    <br>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn" [disabled]="!myForm.valid">Register</button>
+
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account?<a href="/" >Login</a>.</p>
+
+  </div>
+
+</form>

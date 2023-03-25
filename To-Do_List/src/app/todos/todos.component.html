@@ -1,0 +1,33 @@
+<h1 class="mt-5 bg-warning text-black rounded ms-4 me-4 fw-bold text-center">Monty Notes</h1>
+
+<br>
+
+<br>
+
+<div class="justify-content-center rounded ms-4 me-4 fw-bold bg-dark">
+
+  <h2 class="text-center text-primary">{{_user.user.name}}</h2>
+  <p class="text-center text-primary">{{_user.user.favQuote}}</p>
+
+</div>
+
+<br>
+
+<section class="container border bg-primary text-center mt-5 rounded">
+
+  <div class="row justify-content-md-center">
+
+    <div class="row mt-5 input-group mb-5">
+      <input type="text" class="form-control fs-5 fw-bold text-center col-sm-6" placeholder="New To-Do" aria-describedby="new To-Do" [(ngModel)]="_todos.todo">
+      <button class="btn bg-dark text-warning fw-bold fs-5 col-sm-2" type="button" (click) = "_todos.addTodo()">Button</button>
+    </div>
+
+    <div class="row col mt-4 mb-5 col-lg-12">
+
+      <app-todo *ngFor="let todo of todos; let i = index" [todo]="todo"></app-todo>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,53 @@
+.topnav {
+  background-color: #39c4d6fb;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: gray;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: green;
+  color: white;
+}
+
+img{
+  margin-top: 8px;
+  width: 30px;
+}
+
+i{
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+  color: white;
+  font-size: 25px;
+
+}
+
+.delSpan{
+  color: red;
+  font-size: 20px;
+}
+
+.favSpan{
+  color: yellow;
+  font-size: 20px;
+}
+
+.compSpan{
+  color: green;
+  font-size: 20px;
+}

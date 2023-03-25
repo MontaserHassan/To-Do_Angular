@@ -1,0 +1,37 @@
+.firstpage{
+  background-color: grey;
+  position: absolute;
+  overflow: hidden;
+}
+
+.helloImg {
+  margin: 56.5px 560px;
+}
+
+.top {
+  color: brown;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bottomleft {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+  text-align: center;
+  color: brown;
+  margin-top: 15px;
+}
+
+button{
+  margin-bottom: 10px;
+  margin-left: 320px;
+  padding: 9px;
+}
+
+button:hover{
+  background-color: azure;
+  color: black;
+}

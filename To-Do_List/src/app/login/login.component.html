@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="loginPage">
+
+  <div class="imgcontainer">
+    <img src="../../assets/To-Do Pic.png" alt="Todo" class="Todo">
+  </div>
+
+  <div class="container">
+
+    <label for="uname" class="form-label"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" formControlName="username" required>
+    <span class="text-danger"
+      *ngIf="loginForm.value.username.touched">
+      <br>
+      Invalid UserName
+    </span>
+
+    <br>
+
+    <label for="quote" class="form-label"><b>Quote</b></label>
+    <textarea type="text" placeholder="Enter your fav quote" formControlName="quote" required></textarea>
+    <span class="text-danger"
+      *ngIf="loginForm.value.quote.errors?.['required'] && loginForm.value.quote.touched">
+      <br>
+      Invalid Quote -minimum Length 10 Characters-
+    </span>
+
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    <button type="submit" (click)="registerUser()">Register</button>
+
+  </div>
+
+</form>
+

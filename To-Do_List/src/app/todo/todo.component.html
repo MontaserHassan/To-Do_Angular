@@ -1,0 +1,27 @@
+<!-- soan -->
+
+<section class="todos-contasiner">
+
+  <table class="table">
+
+    <tbody>
+
+      <tr class = "fw-bold h4">
+        <span>
+          <td class="name {{!todo.completed ? 'waiting' : 'notWaiting'}} text-lg-start">{{ todo.todo }}</td>
+        </span>
+
+        <span style="float: right;">
+
+          <td class="del" (click) = "_todos.deleteTodo(todo)"><button class="text-lg-end fixed fixed-button" style="color:red; font-weight: bold;">Del</button></td>
+          <td (click) = "_todos.addFavoriteTodo(todo)"><button style="color:yellow; font-weight: bold;" class="text-lg-end fixed-button">Fav</button></td>
+          <td class="fin" (click) = "_todos.isCompleted(todo)"><button style="color:green; font-weight: bold;" class="fixed-button text-lg-end">Finished</button></td>
+
+        </span>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>

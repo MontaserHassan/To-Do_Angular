@@ -1,0 +1,56 @@
+.del{
+  text-align: end;
+}
+
+.afterfav{
+  background-color: yellow;
+  color: white;
+}
+
+.fav{
+background-color: white;
+  color: yellow;
+  font-weight: bold
+}
+
+.name{
+  text-align: start;
+  left: 5%
+}
+
+.waiting{
+  text-decoration: line-through;
+  /* background-color: white; */
+  color: salmon;
+  text-align: center;
+}
+
+.waiting:hover{
+  text-decoration: line-through;
+  /* background-color: black; */
+  color: white;
+  text-align: center;
+}
+
+.notWaiting{
+  text-decoration: none;
+  /* background-color: black; */
+  text-align: center;
+  color: red;
+}
+
+.notWaiting:hover{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  /* background-color: wheat; */
+}
+
+.fixed-button {
+  text-align: center;
+  float: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
