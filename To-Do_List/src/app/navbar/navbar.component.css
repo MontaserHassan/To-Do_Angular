@@ -1,5 +1,5 @@
 .topnav {
-  background-color: #39c4d6fb;
+  background-color: #3943d6fb;
   overflow: hidden;
 }
 
@@ -13,13 +13,17 @@
 }
 
 .topnav a:hover {
-  background-color: gray;
+  background-color: green;
   color: white;
 }
 
-.topnav a.active {
+/* .topnav a.active {
   background-color: green;
   color: white;
+} */
+
+.topnav a.notactive {
+  background-color: red;
 }
 
 img{
@@ -48,6 +52,6 @@ i{
 }
 
 .compSpan{
-  color: green;
+  color: rgb(0, 128, 0);
   font-size: 20px;
 }

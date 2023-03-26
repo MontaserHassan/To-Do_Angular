@@ -20,6 +20,7 @@ export class ContactUsComponent {
       (res) =>
         {
           this.isLogged = res;
+          alert("thanks for your message")
           this._router.navigate(['/home']);
         }
     );
